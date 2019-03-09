@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "envision"
-version = "0.1.0"
+version = "0.1.1"
 description = "A encrypted environment variables manager for python projects"
 authors = ["AndreGuerra123 <guerraandre@hotmail.com>"]
 
