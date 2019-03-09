@@ -13,18 +13,16 @@ pip install envision
 
 ## Usage:
 
-First, in the root of your project just initialize envision:
+First in the root of your project just initialize envision:
 
 ```bash
 envision init --token="YOURCUSTOMKEY"
 ```
 Note: If your token argument is not set, a key will be automatically generated for you.
 
-Three files will be created, a .envision, a .envision.lock and a .envision.key file. 
-Some warnings will be produced if in your .gitignore file there is not a entry for exclusion of envision and envision.key files.
-If you pretend to use envision in a git project please, add .envision and .envision.key to .gitignored.
+Three files will be created: .envision,  .envision.lock and .envision.key file. If you pretend to use envision in a git project please add .envision and .envision.key to .gitignored; otherwise a warning messages will be displayed.
 
-Secondly, just add desired environment-like variables using the commands:
+Secondly just add desired environment-like variables using the commands:
 
 ```bash
 envision add
@@ -48,8 +46,8 @@ In production mode, you only have to declare one environment variable ENVISION w
 export ENVISION = 'YOURCUSTOMKEY'
 ```
 
-The .envision.lock file containing the locked and encrypted key-values can then be accessed inproduction.
-Then to have access to the remaining key-values encrypted just do the following in your project:
+The .envision.lock file containing the locked and encrypted key-values can then be accessed in production.
+In order to have access to the remaining key-values encrypted just do the following in your project:
 
 ```python
 from envison import envision
@@ -61,8 +59,8 @@ envision().get('A')
 
   ### How can I use the command line arguments in a directory outside my current directory?
   
-  - Every CLI function has the --root parameter which can be set to the desired root of the project. 
-  The envision constructor acepts exactly the same argument to define where to look for the envision files.
+  - Every CLI function has the --root parameter, which defines the target root of the project. 
+  The envision constructor acepts exactly the same argument.
   
   ### How to change the key password?
   
